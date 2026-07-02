@@ -254,25 +254,26 @@
   .chart-box .chart-title {
     text-align: center; font-size: 14px; color: #b0396f; font-weight: 700; margin-bottom: 22px;
   }
-  .chart-row {
+  .chart-track {
     display: flex; align-items: flex-end; justify-content: center;
-    gap: 22px; height: 190px; padding: 0 6px 30px;
+    gap: 22px; height: 160px;
   }
-  .chart-col { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; width: 84px; position: relative; }
-  .chart-col .bar-val { font-size: 13px; font-weight: 800; color: #5b2f4a; margin-bottom: 6px; white-space: nowrap; }
-  .chart-col .bar {
+  .chart-bar-wrap { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; width: 84px; height: 100%; }
+  .chart-bar-wrap .bar-val { font-size: 13px; font-weight: 800; color: #5b2f4a; margin-bottom: 6px; white-space: nowrap; }
+  .chart-bar-wrap .bar {
     width: 56px; border-radius: 12px 12px 4px 4px;
     transform-origin: bottom;
     transform: scaleY(0);
     transition: transform 1s cubic-bezier(.2,.8,.2,1);
   }
-  .chart-box.show .chart-col .bar { transform: scaleY(1); }
-  .chart-col.c1 .bar { background: linear-gradient(180deg, #d9a5c2, #c07fa8); height: 160px; transition-delay: 0.05s; }
-  .chart-col.c2 .bar { background: linear-gradient(180deg, #ff8fc0, #ff2f7e); height: 112px; transition-delay: 0.25s; }
-  .chart-col.c3 .bar { background: linear-gradient(180deg, #cbb6c4, #a98aa0); height: 80px; transition-delay: 0.45s; }
-  .chart-col .bar-label { font-size: 11.5px; color: #83587a; margin-top: 10px; text-align: center; line-height: 1.5; }
-  .chart-col.c2 .bar-label { color: #ff2f7e; font-weight: 800; }
-  .chart-note { font-size: 11px; color: #b287a4; text-align: center; margin-top: 4px; }
+  .chart-box.show .chart-bar-wrap .bar { transform: scaleY(1); }
+  .chart-bar-wrap.c1 .bar { background: linear-gradient(180deg, #d9a5c2, #c07fa8); height: 160px; transition-delay: 0.05s; }
+  .chart-bar-wrap.c2 .bar { background: linear-gradient(180deg, #ff8fc0, #ff2f7e); height: 112px; transition-delay: 0.25s; }
+  .chart-bar-wrap.c3 .bar { background: linear-gradient(180deg, #cbb6c4, #a98aa0); height: 80px; transition-delay: 0.45s; }
+  .chart-labels { display: flex; justify-content: center; gap: 22px; margin-top: 10px; }
+  .chart-label { width: 84px; font-size: 11.5px; color: #83587a; text-align: center; line-height: 1.5; }
+  .chart-label.c2 { color: #ff2f7e; font-weight: 800; }
+  .chart-note { font-size: 11px; color: #b287a4; text-align: center; margin-top: 16px; }
 
   .line-preview {
     background: #7494c0;
@@ -334,22 +335,24 @@
 <section class="reveal">
   <div class="chart-box" id="chartBox">
     <div class="chart-title">同じ月商80万円でも、報酬率で手取りはこれだけ変わる</div>
-    <div class="chart-row">
-      <div class="chart-col c1">
+    <div class="chart-track">
+      <div class="chart-bar-wrap c1">
         <div class="bar-val">80万</div>
         <div class="bar"></div>
-        <div class="bar-label">月商<br>（総売上）</div>
       </div>
-      <div class="chart-col c2">
+      <div class="chart-bar-wrap c2">
         <div class="bar-val">56万</div>
         <div class="bar"></div>
-        <div class="bar-label">うちの事務所<br>報酬率70%</div>
       </div>
-      <div class="chart-col c3">
+      <div class="chart-bar-wrap c3">
         <div class="bar-val">40万</div>
         <div class="bar"></div>
-        <div class="bar-label">他社の相場<br>報酬率50%</div>
       </div>
+    </div>
+    <div class="chart-labels">
+      <div class="chart-label c1">月商<br>（総売上）</div>
+      <div class="chart-label c2">うちの事務所<br>報酬率70%</div>
+      <div class="chart-label c3">他社の相場<br>報酬率50%</div>
     </div>
     <p class="chart-note">※月商80万円の場合の試算です。実際の金額は個人差があります。</p>
   </div>
