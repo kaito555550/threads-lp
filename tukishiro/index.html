@@ -102,6 +102,19 @@
     animation: numberGlow 3s ease-in-out infinite;
   }
   .result p.desc { font-size: 13.5px; color: #cbb9ab; position: relative; }
+  .result .rate-badge {
+    position: relative;
+    display: inline-block;
+    margin-top: 16px;
+    padding: 8px 18px;
+    border: 1px solid #c9a27d;
+    border-radius: 30px;
+    color: #f3dab4;
+    font-weight: bold;
+    font-size: 14px;
+    background: rgba(201,162,125,0.08);
+  }
+  .result .rate-badge span { display: block; font-weight: normal; font-size: 10.5px; color: #a9876c; margin-top: 2px; }
   .result p.note { font-size: 11px; color: #74655c; margin-top: 18px; position: relative; }
   @keyframes glowPulse {
     0%, 100% { opacity: 0.6; transform: translateX(-50%) scale(1); }
@@ -255,6 +268,7 @@
     <div class="label">私の場合</div>
     <div class="num">月平均 110万円ほど</div>
     <p class="desc">完全在宅、保育園の送り迎えに合わせて働きながら</p>
+    <div class="rate-badge">報酬率70%<span>（業界相場は50%）・全員固定</span></div>
     <p class="note">※個人の実体験です。成果には個人差があり、必ず同じように稼げることをお約束するものではありません。</p>
   </div>
 </section>
