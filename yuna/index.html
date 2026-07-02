@@ -243,6 +243,59 @@
     text-align: center;
     line-height: 2;
   }
+
+  .chart-box {
+    background: #fff;
+    border-radius: 24px;
+    padding: 28px 22px 20px;
+    box-shadow: 0 10px 28px rgba(255,111,165,0.18);
+    border: 2px solid #ffe1ee;
+  }
+  .chart-box .chart-title {
+    text-align: center; font-size: 14px; color: #b0396f; font-weight: 700; margin-bottom: 22px;
+  }
+  .chart-row {
+    display: flex; align-items: flex-end; justify-content: center;
+    gap: 22px; height: 190px; padding: 0 6px 30px;
+  }
+  .chart-col { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; width: 84px; position: relative; }
+  .chart-col .bar-val { font-size: 13px; font-weight: 800; color: #5b2f4a; margin-bottom: 6px; white-space: nowrap; }
+  .chart-col .bar {
+    width: 56px; border-radius: 12px 12px 4px 4px;
+    transform-origin: bottom;
+    transform: scaleY(0);
+    transition: transform 1s cubic-bezier(.2,.8,.2,1);
+  }
+  .chart-box.show .chart-col .bar { transform: scaleY(1); }
+  .chart-col.c1 .bar { background: linear-gradient(180deg, #d9a5c2, #c07fa8); height: 160px; transition-delay: 0.05s; }
+  .chart-col.c2 .bar { background: linear-gradient(180deg, #ff8fc0, #ff2f7e); height: 112px; transition-delay: 0.25s; }
+  .chart-col.c3 .bar { background: linear-gradient(180deg, #cbb6c4, #a98aa0); height: 80px; transition-delay: 0.45s; }
+  .chart-col .bar-label { font-size: 11.5px; color: #83587a; margin-top: 10px; text-align: center; line-height: 1.5; }
+  .chart-col.c2 .bar-label { color: #ff2f7e; font-weight: 800; }
+  .chart-note { font-size: 11px; color: #b287a4; text-align: center; margin-top: 4px; }
+
+  .line-preview {
+    background: #7494c0;
+    border-radius: 24px;
+    padding: 4px;
+    box-shadow: 0 10px 28px rgba(255,111,165,0.18);
+  }
+  .line-preview .lp-inner {
+    background: #ebeef3;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  .line-preview .lp-header {
+    background: #06C755; color: #fff;
+    padding: 12px 16px; font-size: 13px; font-weight: 700;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .line-preview .lp-header .dot { width: 26px; height: 26px; border-radius: 50%; background: #fff; display:flex; align-items:center; justify-content:center; font-size:14px; }
+  .line-preview .lp-body { padding: 18px 14px; display: flex; flex-direction: column; gap: 10px; }
+  .line-preview .bubble { max-width: 76%; padding: 10px 14px; border-radius: 16px; font-size: 13px; line-height: 1.6; }
+  .line-preview .bubble.in { background: #fff; color: #333; align-self: flex-start; border-bottom-left-radius: 4px; }
+  .line-preview .bubble.out { background: #9be27d; color: #24401c; align-self: flex-end; border-bottom-right-radius: 4px; }
+  .line-preview .lp-caption { text-align: center; font-size: 10.5px; color: #fff; padding: 8px 0 6px; opacity: 0.85; }
 </style>
 </head>
 <body>
@@ -279,6 +332,30 @@
 </section>
 
 <section class="reveal">
+  <div class="chart-box" id="chartBox">
+    <div class="chart-title">同じ月商80万円でも、報酬率で手取りはこれだけ変わる</div>
+    <div class="chart-row">
+      <div class="chart-col c1">
+        <div class="bar-val">80万</div>
+        <div class="bar"></div>
+        <div class="bar-label">月商<br>（総売上）</div>
+      </div>
+      <div class="chart-col c2">
+        <div class="bar-val">56万</div>
+        <div class="bar"></div>
+        <div class="bar-label">うちの事務所<br>報酬率70%</div>
+      </div>
+      <div class="chart-col c3">
+        <div class="bar-val">40万</div>
+        <div class="bar"></div>
+        <div class="bar-label">他社の相場<br>報酬率50%</div>
+      </div>
+    </div>
+    <p class="chart-note">※月商80万円の場合の試算です。実際の金額は個人差があります。</p>
+  </div>
+</section>
+
+<section class="reveal">
   <div class="mystery">
     <div class="bear">🧸💗🧸</div>
     <p>正直、<span style="font-weight:800;">一人でやってたら4年も続かなかった</span>と思う。</p>
@@ -288,6 +365,21 @@
       <li>友達を直接サポートしてるから分かる、ここの良さがある</li>
     </ul>
     <div class="tease">続きは公式LINEでこっそり教えるね🎀</div>
+  </div>
+</section>
+
+<section class="reveal">
+  <h2>公式LINEでのやり取りイメージ</h2>
+  <div class="line-preview">
+    <div class="lp-inner">
+      <div class="lp-header"><span class="dot">🎀</span>公式LINE</div>
+      <div class="lp-body">
+        <div class="bubble in">友だち追加ありがとうございます🎀気軽に質問してくださいね</div>
+        <div class="bubble out">未経験でも大丈夫ですか？</div>
+        <div class="bubble in">もちろんです！始め方から一緒に確認していきましょう😊</div>
+      </div>
+    </div>
+    <div class="lp-caption">※やり取りのイメージです（実際の会話ではありません）</div>
   </div>
 </section>
 
@@ -371,6 +463,14 @@
       }
     });
   });
+
+  const chartBox = document.getElementById('chartBox');
+  if (chartBox) {
+    const chartIo = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) chartBox.classList.add('show'); });
+    }, { threshold: 0.3 });
+    chartIo.observe(chartBox);
+  }
 </script>
 
 </body>
