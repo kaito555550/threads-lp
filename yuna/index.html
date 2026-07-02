@@ -4,13 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>チャトレ歴4年、今は自分の事務所も。24歳、ゆるっと自由に稼ぐ話</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&family=Yomogi&display=swap" rel="stylesheet">
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
   body {
-    font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
-    color: #3a2035;
-    background: #fff0f5;
+    font-family: "M PLUS Rounded 1c", "Hiragino Kaku Gothic ProN", sans-serif;
+    color: #5b2f4a;
+    background: #fff3f8;
     line-height: 1.85;
     overflow-x: hidden;
   }
@@ -19,117 +22,154 @@
   .reveal { opacity: 0; transform: translateY(30px) scale(0.97); transition: opacity 0.7s cubic-bezier(.2,.8,.2,1), transform 0.7s cubic-bezier(.2,.8,.2,1); }
   .reveal.show { opacity: 1; transform: translateY(0) scale(1); }
 
+  .pop {
+    font-family: "Yomogi", "M PLUS Rounded 1c", sans-serif;
+    font-size: 1.28em;
+    color: #ff2f7e;
+    font-weight: 700;
+  }
+
+  .deco-row { text-align: center; font-size: 22px; letter-spacing: 10px; opacity: 0.9; }
+
   header {
     position: relative;
-    background: linear-gradient(160deg, #ff6fa5, #ff9ac2 55%, #ffc2d9);
+    background: linear-gradient(160deg, #ff8fc0, #ffb0d6 55%, #ffd6e8);
     color: #fff;
-    padding: 54px 24px 64px;
+    padding: 50px 24px 70px;
     text-align: center;
-    border-radius: 0 0 40% 40% / 0 0 60px 60px;
+    border-radius: 0 0 45% 45% / 0 0 70px 70px;
     overflow: hidden;
+  }
+  header .float-emoji {
+    position: absolute; font-size: 26px; opacity: 0.85; animation: floaty 5s ease-in-out infinite;
+  }
+  header .e1 { top: 14%; left: 8%; animation-delay: 0s; }
+  header .e2 { top: 20%; right: 10%; animation-delay: 1.2s; }
+  header .e3 { bottom: 10%; left: 14%; animation-delay: 2s; }
+  header .e4 { bottom: 16%; right: 8%; animation-delay: 0.6s; }
+  @keyframes floaty {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-12px) rotate(8deg); }
   }
   header .badge {
     display: inline-block;
-    background: rgba(255,255,255,0.25);
-    border: 1px solid rgba(255,255,255,0.6);
+    background: rgba(255,255,255,0.3);
+    border: 1px solid rgba(255,255,255,0.7);
     border-radius: 20px;
-    padding: 6px 16px;
+    padding: 6px 18px;
     font-size: 11px; letter-spacing: 2px;
     margin-bottom: 20px;
     animation: floatIn 1s ease;
   }
   header h1 {
-    font-size: 25px; line-height: 1.7; margin-bottom: 6px;
+    font-family: "Yomogi", "M PLUS Rounded 1c", sans-serif;
+    font-size: 26px; line-height: 1.7; margin-bottom: 8px;
     animation: floatIn 1.3s ease;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.08);
   }
   @keyframes floatIn { from { opacity:0; transform: translateY(14px);} to { opacity:1; transform: translateY(0);} }
-  header .stars { margin-top: 18px; font-size: 18px; letter-spacing: 4px; animation: floatIn 1.6s ease; }
+  header .stars { margin-top: 16px; font-size: 20px; animation: floatIn 1.6s ease; }
 
   section { padding: 44px 24px; }
   h2 {
-    font-size: 19px; margin-bottom: 22px; text-align: center; color: #ff3d7f;
+    font-family: "Yomogi", "M PLUS Rounded 1c", sans-serif;
+    font-size: 21px; margin-bottom: 22px; text-align: center; color: #ff2f7e;
     position: relative;
   }
-  h2::after {
-    content: ""; display: block; width: 36px; height: 3px; background: #ffb3c9;
-    margin: 10px auto 0; border-radius: 2px;
-  }
+  h2 .ribbon { font-size: 20px; margin: 0 6px; }
 
   .feeling { display: flex; flex-direction: column; gap: 12px; }
   .feeling .card {
     background: #fff;
-    border-radius: 16px;
-    padding: 16px 18px;
+    border-radius: 22px;
+    padding: 16px 20px;
     font-size: 14.5px;
-    box-shadow: 0 6px 16px rgba(255,111,165,0.12);
-    border-left: 4px solid #ff9ac2;
+    box-shadow: 0 8px 20px rgba(255,111,165,0.15);
+    border: 2px dashed #ffc2dc;
+    position: relative;
   }
+  .feeling .card .tag { font-size: 18px; margin-right: 6px; }
 
   .result {
     background: #fff;
-    border-radius: 20px;
-    padding: 30px 22px;
+    border-radius: 28px;
+    padding: 32px 22px;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(255,111,165,0.18);
+    box-shadow: 0 12px 32px rgba(255,111,165,0.22);
     position: relative;
+    border: 3px solid #ffd6e8;
   }
-  .result .crown { font-size: 26px; margin-bottom: 6px; }
-  .result .sub-num { font-size: 14px; color: #a15; margin-bottom: 4px; }
-  .result .num { font-size: 32px; color: #ff3d7f; font-weight: bold; margin: 8px 0 14px; }
-  .result p.note { font-size: 11.5px; color: #b28; margin-top: 16px; }
+  .result .crown { font-size: 30px; margin-bottom: 6px; }
+  .result .sub-num { font-size: 15px; color: #b0396f; margin-bottom: 4px; font-weight: 700; }
+  .result .num {
+    font-family: "Yomogi", "M PLUS Rounded 1c", sans-serif;
+    font-size: 36px; color: #ff2f7e; font-weight: 800; margin: 8px 0 14px;
+  }
+  .result p.note { font-size: 11.5px; color: #c288a5; margin-top: 16px; }
+  .result .ribbon-corner { position: absolute; top: -14px; right: -10px; font-size: 34px; transform: rotate(18deg); }
 
   .mystery {
-    background: linear-gradient(135deg, #ff6fa5, #ffa9c8);
-    border-radius: 20px;
-    padding: 30px 22px;
+    background: linear-gradient(135deg, #ff8fc0, #ffb6d5);
+    border-radius: 28px;
+    padding: 32px 22px;
     color: #fff;
     text-align: center;
+    position: relative;
   }
+  .mystery .bear { font-size: 30px; margin-bottom: 8px; }
   .mystery p { font-size: 14.5px; margin-bottom: 10px; }
   .mystery ul { text-align: left; list-style: none; margin: 16px 4px; }
-  .mystery ul li { font-size: 14px; padding: 9px 0; border-bottom: 1px dashed rgba(255,255,255,0.4); }
-  .mystery ul li:before { content: "💗 "; }
+  .mystery ul li { font-size: 14px; padding: 9px 0; border-bottom: 1px dashed rgba(255,255,255,0.45); }
+  .mystery ul li:before { content: "🎀 "; }
   .mystery .tease {
-    background: #fff; color: #ff3d7f; font-weight: bold; font-size: 14.5px;
-    border-radius: 30px; padding: 10px 18px; display: inline-block; margin-top: 14px;
+    background: #fff; color: #ff2f7e; font-weight: 800; font-size: 15px;
+    border-radius: 30px; padding: 12px 20px; display: inline-block; margin-top: 14px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
   }
 
   .message {
     background: #fff;
-    border-radius: 20px;
+    border-radius: 26px;
     padding: 26px 22px;
     font-size: 14.5px;
-    box-shadow: 0 6px 20px rgba(255,111,165,0.14);
+    box-shadow: 0 8px 24px rgba(255,111,165,0.16);
+    border: 2px solid #ffe1ee;
+    position: relative;
   }
-  .message .name { font-weight: bold; margin-bottom: 10px; color: #ff3d7f; font-size: 16px; }
+  .message .name {
+    font-family: "Yomogi", "M PLUS Rounded 1c", sans-serif;
+    font-weight: 800; margin-bottom: 10px; color: #ff2f7e; font-size: 18px;
+  }
+  .message .paw { position: absolute; top: -12px; left: -10px; font-size: 30px; transform: rotate(-15deg); }
 
   .steps { display: flex; flex-direction: column; gap: 14px; }
   .steps .step {
     background: #fff;
-    border-radius: 16px;
-    padding: 16px 18px 16px 54px;
+    border-radius: 20px;
+    padding: 16px 18px 16px 56px;
     position: relative;
     font-size: 14.5px;
-    box-shadow: 0 6px 16px rgba(255,111,165,0.1);
+    box-shadow: 0 8px 18px rgba(255,111,165,0.12);
   }
   .steps .step .num {
     position: absolute; left: 14px; top: 50%; transform: translateY(-50%);
-    background: linear-gradient(135deg, #ff6fa5, #ff3d7f); color: #fff;
-    width: 28px; height: 28px; border-radius: 50%;
+    background: linear-gradient(135deg, #ff8fc0, #ff2f7e); color: #fff;
+    width: 30px; height: 30px; border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
-    font-size: 13px; font-weight: bold;
+    font-size: 13px; font-weight: 800;
+    box-shadow: 0 4px 10px rgba(255,47,126,0.35);
   }
 
   .faq details {
     background: #fff;
-    border-radius: 14px;
+    border-radius: 18px;
     padding: 14px 18px;
     margin-bottom: 10px;
     font-size: 14px;
-    box-shadow: 0 4px 12px rgba(255,111,165,0.08);
+    box-shadow: 0 4px 14px rgba(255,111,165,0.1);
   }
-  .faq summary { font-weight: bold; cursor: pointer; color: #ff3d7f; }
-  .faq p { margin-top: 10px; color: #74566c; }
+  .faq summary { font-weight: 700; cursor: pointer; color: #ff2f7e; }
+  .faq p { margin-top: 10px; color: #83587a; }
 
   .cta {
     display: block;
@@ -138,8 +178,8 @@
     text-align: center;
     padding: 18px;
     border-radius: 30px;
-    font-weight: bold;
-    font-size: 16.5px;
+    font-weight: 800;
+    font-size: 17px;
     text-decoration: none;
     margin: 30px auto 0;
     max-width: 340px;
@@ -153,26 +193,26 @@
 
   .sticky-cta {
     position: fixed; left: 0; right: 0; bottom: 0;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.92);
     backdrop-filter: blur(6px);
     padding: 12px 20px calc(12px + env(safe-area-inset-bottom));
     display: flex; justify-content: center;
     transform: translateY(100%);
     transition: transform 0.4s ease;
     z-index: 50;
-    box-shadow: 0 -4px 16px rgba(255,111,165,0.15);
+    box-shadow: 0 -4px 16px rgba(255,111,165,0.18);
   }
   .sticky-cta.show { transform: translateY(0); }
   .sticky-cta a {
     background: #06C755; color: #fff; text-decoration: none;
-    padding: 13px 30px; border-radius: 30px; font-weight: bold; font-size: 14.5px;
+    padding: 13px 30px; border-radius: 30px; font-weight: 800; font-size: 14.5px;
     width: 100%; max-width: 400px; text-align: center;
   }
 
   footer {
     padding: 30px 24px 110px;
     font-size: 10.5px;
-    color: #a189a0;
+    color: #c9a2ba;
     text-align: center;
     line-height: 2;
   }
@@ -182,21 +222,26 @@
 <div class="wrap">
 
 <header>
-  <div class="badge">COMPLETE 在宅 ワーク</div>
+  <span class="float-emoji e1">🧸</span>
+  <span class="float-emoji e2">🎀</span>
+  <span class="float-emoji e3">🌸</span>
+  <span class="float-emoji e4">✨</span>
+  <div class="badge">🎀 COMPLETE 在宅 ワーク 🎀</div>
   <h1>チャトレ歴4年、<br>今は自分の事務所も。<br>24歳、ゆるっと自由に<br>稼ぐ話</h1>
   <div class="stars">★★★★★</div>
 </header>
 
 <section class="feeling reveal">
-  <h2>こんなこと、感じていませんか</h2>
-  <div class="card">バイトの何倍も稼げるって聞くけど、正直ちょっと怪しく感じる</div>
-  <div class="card">始めても続けられるか不安</div>
-  <div class="card">稼げる子と稼げない子、何が違うんだろう</div>
-  <div class="card">誰かに直接聞きながら始めたい</div>
+  <h2><span class="ribbon">🎀</span>こんなこと、感じていませんか<span class="ribbon">🎀</span></h2>
+  <div class="card"><span class="tag">🤔</span>バイトの何倍も稼げるって聞くけど、正直ちょっと<span class="pop">怪しく感じる</span></div>
+  <div class="card"><span class="tag">😥</span>始めても続けられるか不安</div>
+  <div class="card"><span class="tag">💭</span>稼げる子と稼げない子、何が違うんだろう</div>
+  <div class="card"><span class="tag">🧸</span>誰かに直接聞きながら始めたい</div>
 </section>
 
 <section class="reveal">
   <div class="result">
+    <div class="ribbon-corner">🎀</div>
     <div class="crown">👑</div>
     <div class="sub-num">最高月商 180万円</div>
     <div class="num">今は月40〜80万円ほど</div>
@@ -207,21 +252,23 @@
 
 <section class="reveal">
   <div class="mystery">
-    <p>正直、一人でやってたら4年も続かなかったと思う。</p>
+    <div class="bear">🧸💗🧸</div>
+    <p>正直、<span style="font-weight:800;">一人でやってたら4年も続かなかった</span>と思う。</p>
     <ul>
       <li>他の事務所とはちょっと違う、続けられる理由がある</li>
       <li>困った時、すぐ相談できる距離感がある</li>
       <li>友達を直接サポートしてるから分かる、ここの良さがある</li>
     </ul>
-    <div class="tease">続きは公式LINEでこっそり教えるね</div>
+    <div class="tease">続きは公式LINEでこっそり教えるね🎀</div>
   </div>
 </section>
 
 <section class="reveal">
   <h2>ゆなからのメッセージ</h2>
   <div class="message">
-    <div class="name">ゆな</div>
-    私も最初は月3万円しか稼げなくて、向いてないと思ってました。でも4年続けて、今は自分の事務所も持てるように。稼ぎ方より続け方が大事だって、身をもって知ってます。友達には直接教えてるので、気になったら気軽に聞いてください。
+    <div class="paw">🐾</div>
+    <div class="name">ゆな 🎀</div>
+    私も最初は<span class="pop">月3万円</span>しか稼げなくて、向いてないと思ってました。でも4年続けて、今は自分の事務所も持てるように。稼ぎ方より<span class="pop">続け方</span>が大事だって、身をもって知ってます。友達には直接教えてるので、気になったら気軽に聞いてください🧸
   </div>
 </section>
 
@@ -256,7 +303,7 @@
   </details>
 </section>
 
-<a class="cta reveal" href="https://lin.ee/9hyERGM">この稼ぎ方、公式LINEで聞いてみる</a>
+<a class="cta reveal" href="https://lin.ee/9hyERGM">🎀 この稼ぎ方、公式LINEで聞いてみる 🎀</a>
 
 <footer>
   女性限定（男性は対象外）／18歳未満（高校生を含む）不可<br>
@@ -268,7 +315,7 @@
 </div>
 
 <div class="sticky-cta" id="stickyCta">
-  <a href="https://lin.ee/9hyERGM">公式LINEで聞いてみる</a>
+  <a href="https://lin.ee/9hyERGM">🎀 公式LINEで聞いてみる</a>
 </div>
 
 <script>
