@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>営業6年、給料が伸びずに始めた在宅ワークの話</title>
+<meta name="description" content="新卒で大手企業の営業職に就職し6年。給料が伸び悩んで始めた副業が、今では本業に。29歳、完全在宅で地元に戻って働く話。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="営業6年、給料が伸びずに始めた在宅ワークの話">
+<meta property="og:description" content="土日数時間の副業から始めて、2年前に退職して本業化。真面目にコツコツ、35歳までに資産形成が目標。">
+<meta property="og:url" content="https://aya2026.netlify.app/">
+<meta property="og:site_name" content="あやの話">
+<meta property="og:image" content="https://aya2026.netlify.app/ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&family=Yomogi&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "M PLUS Rounded 1c", "Hiragino Kaku Gothic ProN", sans-serif;
+    color: #2f4152;
+    background: #f0f6f7;
+    line-height: 1.85;
+    overflow-x: hidden;
+  }
+  .wrap { max-width: 480px; margin: 0 auto; position: relative; }
+
+  .reveal { opacity: 0; transform: translateY(30px) scale(0.97); transition: opacity 0.7s cubic-bezier(.2,.8,.2,1), transform 0.7s cubic-bezier(.2,.8,.2,1); }
+  .reveal.show { opacity: 1; transform: translateY(0) scale(1); }
+
+  .pop {
+    font-family: "Yomogi", "M PLUS Rounded 1c", sans-serif;
+    font-size: 1.28em;
+    color: #1f8a8c;
+    font-weight: 700;
+  }
+
+  .deco-row { text-align: center; font-size: 22px; letter-spacing: 10px; opacity: 0.9; }
+
+  header {
+    position: relative;
+    background: linear-gradient(160deg, #3aa0a3, #5cb8ba 55%, #a9dcdc);
+    color: #fff;
+    padding: 50px 24px 70px;
+    text-align: center;
+    border-radius: 0 0 45% 45% / 0 0 70px 70px;
+    overflow: hidden;
+  }
+  header .float-emoji {
+    position: absolute; font-size: 26px; opacity: 0.85; animation: floaty 5s ease-in-out infinite;
+  }
+  header .e1 { top: 14%; left: 8%; animation-delay: 0s; }
+  header .e2 { top: 20%; right: 10%; animation-delay: 1.2s; }
+  header .e3 { bottom: 10%; left: 14%; animation-delay: 2s; }
+  header .e4 { bottom: 16%; right: 8%; animation-delay: 0.6s; }
+  @keyframes floaty {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-12px) rotate(8deg); }
+  }
+  header .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.3);
+    border: 1px solid rgba(255,255,255,0.7);
+    border-radius: 20px;
+    padding: 6px 18px;
+    font-size: 11px; letter-spacing: 2px;
+    margin-bottom: 20px;
+    animation: floatIn 1s ease;
+  }
+  header h1 {
+    font-family: "Yomogi", "M PLUS Rounded 1c", sans-serif;
+    font-size: 26px; line-height: 1.7; margin-bottom: 8px;
+    animation: floatIn 1.3s ease;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  }
+  @keyframes floatIn { from { opacity:0; transform: translateY(14px);} to { opacity:1; transform: translateY(0);} }
+  header .stars { margin-top: 16px; font-size: 20px; animation: floatIn 1.6s ease; }
+
+  section { padding: 44px 24px; }
+  h2 {
+    font-family: "Yomogi", "M PLUS Rounded 1c", sans-serif;
+    font-size: 21px; margin-bottom: 22px; text-align: center; color: #1f8a8c;
+    position: relative;
+  }
+  h2 .ribbon { font-size: 20px; margin: 0 6px; }
+
+  .feeling { display: flex; flex-direction: column; gap: 12px; }
+  .feeling .card {
+    background: #fff;
+    border-radius: 22px;
+    padding: 16px 20px;
+    font-size: 14.5px;
+    box-shadow: 0 8px 20px rgba(31,138,140,0.12);
+    border: 2px dashed #a9dcdc;
+    position: relative;
+  }
+  .feeling .card .tag { font-size: 18px; margin-right: 6px; }
+
+  .result {
+    background: #fff;
+    border-radius: 28px;
+    padding: 32px 22px;
+    text-align: center;
+    box-shadow: 0 12px 32px rgba(31,138,140,0.18);
+    position: relative;
+    border: 3px solid #cdeaea;
+  }
+  .result .crown { font-size: 30px; margin-bottom: 6px; }
+  .result .sub-num { font-size: 15px; color: #22797b; margin-bottom: 4px; font-weight: 700; }
+  .result .num {
+    font-family: "Yomogi", "M PLUS Rounded 1c", sans-serif;
+    font-size: 34px; color: #1f8a8c; font-weight: 800; margin: 8px 0 14px;
+  }
+  .result .rate-badge {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 9px 18px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #3aa0a3, #1f8a8c);
+    color: #fff;
+    font-weight: 800;
+    font-size: 14px;
+    box-shadow: 0 6px 16px rgba(31,138,140,0.3);
+  }
+  .result .rate-badge span { display: block; font-weight: 400; font-size: 10.5px; opacity: 0.9; margin-top: 2px; }
+  .result p.note { font-size: 11.5px; color: #8fb3b3; margin-top: 16px; }
+  .result .ribbon-corner { position: absolute; top: -14px; right: -10px; font-size: 34px; transform: rotate(18deg); }
+
+  .mystery {
+    background: linear-gradient(135deg, #3aa0a3, #5cb8ba);
+    border-radius: 28px;
+    padding: 32px 22px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+  }
+  .mystery .bear { font-size: 30px; margin-bottom: 8px; }
+  .mystery p { font-size: 14.5px; margin-bottom: 10px; }
+  .mystery ul { text-align: left; list-style: none; margin: 16px 4px; }
+  .mystery ul li { font-size: 14px; padding: 9px 0; border-bottom: 1px dashed rgba(255,255,255,0.45); }
+  .mystery ul li:before { content: "📎 "; }
+  .mystery .tease {
+    background: #fff; color: #1f8a8c; font-weight: 800; font-size: 15px;
+    border-radius: 30px; padding: 12px 20px; display: inline-block; margin-top: 14px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  }
+
+  .message {
+    background: #fff;
+    border-radius: 26px;
+    padding: 26px 22px;
+    font-size: 14.5px;
+    box-shadow: 0 8px 24px rgba(31,138,140,0.14);
+    border: 2px solid #cdeaea;
+    position: relative;
+  }
+  .message .name {
+    font-family: "Yomogi", "M PLUS Rounded 1c", sans-serif;
+    font-weight: 800; margin-bottom: 10px; color: #1f8a8c; font-size: 18px;
+  }
+  .message .paw { position: absolute; top: -12px; left: -10px; font-size: 30px; transform: rotate(-15deg); }
+
+  .steps { display: flex; flex-direction: column; gap: 14px; }
+  .steps .step {
+    background: #fff;
+    border-radius: 20px;
+    padding: 16px 18px 16px 56px;
+    position: relative;
+    font-size: 14.5px;
+    box-shadow: 0 8px 18px rgba(31,138,140,0.1);
+  }
+  .steps .step .num {
+    position: absolute; left: 14px; top: 50%; transform: translateY(-50%);
+    background: linear-gradient(135deg, #3aa0a3, #1f8a8c); color: #fff;
+    width: 30px; height: 30px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 800;
+    box-shadow: 0 4px 10px rgba(31,138,140,0.35);
+  }
+
+  .faq details {
+    background: #fff;
+    border-radius: 18px;
+    padding: 14px 18px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    box-shadow: 0 4px 14px rgba(31,138,140,0.08);
+  }
+  .faq summary { font-weight: 700; cursor: pointer; color: #1f8a8c; }
+  .faq p { margin-top: 10px; color: #5a7a7c; }
+
+  .cta {
+    display: block;
+    background: linear-gradient(135deg, #06C755, #04a648);
+    color: #fff;
+    text-align: center;
+    padding: 18px;
+    border-radius: 30px;
+    font-weight: 800;
+    font-size: 17px;
+    text-decoration: none;
+    margin: 30px auto 0;
+    max-width: 340px;
+    animation: pulse 2.2s infinite;
+  }
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(6,199,85,0.5); }
+    70% { box-shadow: 0 0 0 16px rgba(6,199,85,0); }
+    100% { box-shadow: 0 0 0 0 rgba(6,199,85,0); }
+  }
+
+  .sticky-cta {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(6px);
+    padding: 12px 20px calc(12px + env(safe-area-inset-bottom));
+    display: flex; justify-content: center;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+    z-index: 50;
+    box-shadow: 0 -4px 16px rgba(31,138,140,0.16);
+  }
+  .sticky-cta.show { transform: translateY(0); }
+  .sticky-cta a {
+    background: #06C755; color: #fff; text-decoration: none;
+    padding: 13px 30px; border-radius: 30px; font-weight: 800; font-size: 14.5px;
+    width: 100%; max-width: 400px; text-align: center;
+  }
+
+  footer {
+    padding: 30px 24px 110px;
+    font-size: 10.5px;
+    color: #93b0b1;
+    text-align: center;
+    line-height: 2;
+  }
+
+  .chart-box {
+    background: #fff;
+    border-radius: 24px;
+    padding: 28px 22px 20px;
+    box-shadow: 0 10px 28px rgba(31,138,140,0.16);
+    border: 2px solid #cdeaea;
+  }
+  .chart-box .chart-title {
+    text-align: center; font-size: 14px; color: #22797b; font-weight: 700; margin-bottom: 22px;
+  }
+  .chart-track {
+    display: flex; align-items: flex-end; justify-content: center;
+    gap: 22px; height: 160px;
+  }
+  .chart-bar-wrap { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; width: 84px; height: 100%; }
+  .chart-bar-wrap .bar-val { font-size: 13px; font-weight: 800; color: #2f4152; margin-bottom: 6px; white-space: nowrap; }
+  .chart-bar-wrap .bar {
+    width: 56px; border-radius: 12px 12px 4px 4px;
+    transform-origin: bottom;
+    transform: scaleY(0);
+    transition: transform 1s cubic-bezier(.2,.8,.2,1);
+  }
+  .chart-box.show .chart-bar-wrap .bar { transform: scaleY(1); }
+  .chart-bar-wrap.c1 .bar { background: linear-gradient(180deg, #a9dcdc, #7cc3c3); height: 160px; transition-delay: 0.05s; }
+  .chart-bar-wrap.c2 .bar { background: linear-gradient(180deg, #3aa0a3, #1f8a8c); height: 112px; transition-delay: 0.25s; }
+  .chart-bar-wrap.c3 .bar { background: linear-gradient(180deg, #b9c6c6, #8fa3a3); height: 80px; transition-delay: 0.45s; }
+  .chart-labels { display: flex; justify-content: center; gap: 22px; margin-top: 10px; }
+  .chart-label { width: 84px; font-size: 11.5px; color: #5a7a7c; text-align: center; line-height: 1.5; }
+  .chart-label.c2 { color: #1f8a8c; font-weight: 800; }
+  .chart-note { font-size: 11px; color: #7c9c9d; text-align: center; margin-top: 16px; }
+
+  .line-preview {
+    background: #7494c0;
+    border-radius: 24px;
+    padding: 4px;
+    box-shadow: 0 10px 28px rgba(31,138,140,0.16);
+  }
+  .line-preview .lp-inner {
+    background: #ebeef3;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  .line-preview .lp-header {
+    background: #06C755; color: #fff;
+    padding: 12px 16px; font-size: 13px; font-weight: 700;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .line-preview .lp-header .dot { width: 26px; height: 26px; border-radius: 50%; background: #fff; display:flex; align-items:center; justify-content:center; font-size:14px; }
+  .line-preview .lp-body { padding: 18px 14px; display: flex; flex-direction: column; gap: 10px; }
+  .line-preview .bubble { max-width: 76%; padding: 10px 14px; border-radius: 16px; font-size: 13px; line-height: 1.6; }
+  .line-preview .bubble.in { background: #fff; color: #333; align-self: flex-start; border-bottom-left-radius: 4px; }
+  .line-preview .bubble.out { background: #9be27d; color: #24401c; align-self: flex-end; border-bottom-right-radius: 4px; }
+  .line-preview .lp-caption { text-align: center; font-size: 10.5px; color: #fff; padding: 8px 0 6px; opacity: 0.85; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <span class="float-emoji e1">📎</span>
+  <span class="float-emoji e2">☕</span>
+  <span class="float-emoji e3">📈</span>
+  <span class="float-emoji e4">✨</span>
+  <div class="badge">📎 完全在宅 ワーク 📎</div>
+  <h1>営業6年、給料が<br>伸びずに始めた<br>在宅ワークの話</h1>
+  <div class="stars">★★★★★</div>
+</header>
+
+<section class="feeling reveal">
+  <h2><span class="ribbon">📎</span>こんなこと、感じていませんか<span class="ribbon">📎</span></h2>
+  <div class="card"><span class="tag">🤔</span>真面目に働いてるのに、給料が<span class="pop">全然伸びない</span></div>
+  <div class="card"><span class="tag">😥</span>満員電車・終電、この生活いつまで続くんだろう</div>
+  <div class="card"><span class="tag">💭</span>副業したいけど、何から始めればいいかわからない</div>
+  <div class="card"><span class="tag">📈</span>将来のために、コツコツ資産を作りたい</div>
+</section>
+
+<section class="reveal">
+  <div class="result">
+    <div class="ribbon-corner">📎</div>
+    <div class="crown">📈</div>
+    <div class="sub-num">チャトレ歴4年（本業2年）</div>
+    <div class="num">月平均80万円ほど</div>
+    <p>土日数時間の副業から始めて、2年前に退職して本業化</p>
+    <div class="rate-badge">📎 報酬率70%<span>（業界相場は50%）・全員固定</span></div>
+    <p class="note">※個人の実体験です。成果には個人差があり、必ず同じように稼げることをお約束するものではありません。</p>
+  </div>
+</section>
+
+<section class="reveal">
+  <div class="chart-box" id="chartBox">
+    <div class="chart-title">同じ月商80万円でも、報酬率で手取りはこれだけ変わる</div>
+    <div class="chart-track">
+      <div class="chart-bar-wrap c1">
+        <div class="bar-val">80万</div>
+        <div class="bar"></div>
+      </div>
+      <div class="chart-bar-wrap c2">
+        <div class="bar-val">56万</div>
+        <div class="bar"></div>
+      </div>
+      <div class="chart-bar-wrap c3">
+        <div class="bar-val">40万</div>
+        <div class="bar"></div>
+      </div>
+    </div>
+    <div class="chart-labels">
+      <div class="chart-label c1">月商<br>（総売上）</div>
+      <div class="chart-label c2">うちの事務所<br>報酬率70%</div>
+      <div class="chart-label c3">他社の相場<br>報酬率50%</div>
+    </div>
+    <p class="chart-note">※月商80万円の場合の試算です。実際の金額は個人差があります。</p>
+  </div>
+</section>
+
+<section class="reveal">
+  <div class="mystery">
+    <div class="bear">📎📈📎</div>
+    <p>正直、<span style="font-weight:800;">一人で手探りだったら2年前に退職する決断はできなかった</span>と思う。</p>
+    <ul>
+      <li>他の事務所とはちょっと違う、続けられる理由がある</li>
+      <li>困った時、すぐ相談できる距離感がある</li>
+      <li>同じように会社員から切り替えた子も実は多い</li>
+    </ul>
+    <div class="tease">続きは公式LINEでこっそり教えるね📎</div>
+  </div>
+</section>
+
+<section class="reveal">
+  <h2>公式LINEの中身</h2>
+  <div class="line-preview">
+    <img src="line-real.jpg" alt="公式LINEの画面" style="width:100%; display:block; border-radius: 20px;">
+    <div class="lp-caption">※実際の公式LINEアカウントの画面です</div>
+  </div>
+</section>
+
+<section class="reveal">
+  <h2>あやからのメッセージ</h2>
+  <div class="message">
+    <div class="paw">📎</div>
+    <div class="name">あや 📎</div>
+    新卒で入った大手企業で6年営業をしてましたが、給料の伸び悩みから副業でこの仕事を始めました。真面目にコツコツ続けるタイプなので、2年前に本業にする決断ができたのだと思います。会社員からの切り替え、迷ってる方には直接相談に乗ります📎
+  </div>
+</section>
+
+<section class="steps reveal">
+  <h2>始め方</h2>
+  <div class="step"><span class="num">1</span>公式LINEで話を聞く（無理な勧誘はしません）</div>
+  <div class="step"><span class="num">2</span>気になることを何でも相談する</div>
+  <div class="step"><span class="num">3</span>納得したら始める。いつでもやめられます</div>
+</section>
+
+<section class="faq reveal">
+  <h2>よくある質問</h2>
+  <details>
+    <summary>会社にバレませんか？</summary>
+    <p>本名や顔出し不要で活動できます。詳しい対策はLINEでお伝えします。</p>
+  </details>
+  <details>
+    <summary>未経験でも大丈夫ですか？</summary>
+    <p>大丈夫です。私も会社員から始めました。始め方から直接サポートします。</p>
+  </details>
+  <details>
+    <summary>ノルマはありますか？</summary>
+    <p>ありません。土日や仕事終わりなど、自分のペースで活動できます。</p>
+  </details>
+  <details>
+    <summary>収入は本当に安定しますか？</summary>
+    <p>個人差があり、収入を保証するものではありません。まずは相談だけでも大丈夫です。</p>
+  </details>
+  <details>
+    <summary>本業と両立できますか？</summary>
+    <p>土日数時間から始める方も多いです。自分の空いた時間に合わせて活動できます。</p>
+  </details>
+  <details>
+    <summary>報酬率はどのくらいですか？📎</summary>
+    <p>報酬率70%（業界相場は50%）で、全員固定だよ。</p>
+  </details>
+</section>
+
+<a class="cta reveal" href="https://lin.ee/9hyERGM">📎 この働き方、公式LINEで聞いてみる 📎</a>
+
+<footer>
+  女性限定（男性は対象外）／18歳未満（高校生を含む）不可<br>
+  成果には個人差があります。確実な収入を保証するものではありません。<br>
+  違法・過大な収入を謳うものではなく、実体験の共有です。<br>
+  お問い合わせ：公式LINEアカウントまで
+</footer>
+
+</div>
+
+<div class="sticky-cta" id="stickyCta">
+  <a href="https://lin.ee/9hyERGM">📎 公式LINEで聞いてみる</a>
+</div>
+
+<script>
+  const items = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
+  }, { threshold: 0.15 });
+  items.forEach(i => io.observe(i));
+
+  const sticky = document.getElementById('stickyCta');
+  const header = document.querySelector('header');
+  const stickyIo = new IntersectionObserver((entries) => {
+    entries.forEach(e => { sticky.classList.toggle('show', !e.isIntersecting); });
+  }, { threshold: 0 });
+  stickyIo.observe(header);
+
+  document.querySelectorAll('a[href*="lin.ee"]').forEach(function (el) {
+    el.addEventListener('click', function () {
+      if (typeof gtag === 'function') {
+        gtag('event', 'line_click', { event_category: 'CTA', event_label: el.textContent.trim() });
+      }
+    });
+  });
+
+  const chartBox = document.getElementById('chartBox');
+  if (chartBox) {
+    const chartIo = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) chartBox.classList.add('show'); });
+    }, { threshold: 0.3 });
+    chartIo.observe(chartBox);
+  }
+</script>
+
+</body>
+</html>
